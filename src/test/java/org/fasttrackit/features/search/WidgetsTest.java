@@ -18,16 +18,18 @@ public class WidgetsTest extends BaseTest {
     }
 
     @Test
-   public void verifyAutoComplete(){
-        widgetsSteps.openAutoComplete();
-        widgetsSteps.typeAutoComplField("red");
-   }
+    public void selectColor() throws InterruptedException {
+      widgetsSteps.openAutoComplete();
+      widgetsSteps.selectColor("Green");
+      widgetsSteps.verifyColorGreenIsSelected("Green");
+    }
 
    @Test
     public void setDate(){
         widgetsSteps.openDatePickerPage();
         widgetsSteps.clickDatePicker();
         widgetsSteps.selectDate();
+        widgetsSteps.checkSelectedDate("12/15/1988");
    }
 
    @Test

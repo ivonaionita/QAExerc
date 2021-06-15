@@ -36,9 +36,15 @@ public class WidgetsSteps {
         autoCompletePage.openAutoCompletePage();
     }
     @Step
-    public void typeAutoComplField(String color){
-        autoCompletePage.typeInAutoCompleteField(color);
+    public void selectColor(String color) throws InterruptedException {
+        autoCompletePage.openAutoCompletePage();
+        autoCompletePage.selectColor(color);
     }
+    @Step
+    public void verifyColorGreenIsSelected(String displayedColor){
+       autoCompletePage.verifyColorIsSelected(displayedColor);
+    }
+
 
     //Date picker Page
 
@@ -53,6 +59,10 @@ public class WidgetsSteps {
     @Step
     public void selectDate(){
         datePickerPage.selectDate();
+    }
+    @Step
+    public void checkSelectedDate(String date){
+        datePickerPage.checkDateIsCorrect(date);
     }
 
     //Slider Page

@@ -5,8 +5,6 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
-import org.yecht.Data;
-
 import java.util.List;
 
 @DefaultUrl("https://demoqa.com/webtables")
@@ -31,9 +29,7 @@ public class WebTablesPage extends PageObject {
     @FindBy(css=".rt-tbody .rt-tr:not(.-padRow)")
     private List<WebElementFacade> table;
 
-    public void openWebTablesPage(){
-        open();
-    }
+
     public void clickAdd(){
         clickOn(addButton);
     }

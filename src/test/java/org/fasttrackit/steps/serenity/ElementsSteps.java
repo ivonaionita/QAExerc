@@ -1,13 +1,8 @@
 package org.fasttrackit.steps.serenity;
-
-import io.cucumber.java.pa.ਜਦੋਂ;
 import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.*;
+import org.fasttrackit.utils.BasePage;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-import static org.junit.Assert.assertTrue;
 
 public class ElementsSteps {
     private TextBoxPage textBoxPage;
@@ -20,12 +15,12 @@ public class ElementsSteps {
     private UploadAndDownLoadPage uploadAndDownLoadPage;
     private DynamicProperties dynamicProperties;
 
+
    //Text Box
     @Step
     public void openTextBoxPage(){
-        textBoxPage.openTextBoxPage();
+        textBoxPage.open();
     }
-
     @Step
     public void completeFullNameField(String text){
         textBoxPage.completeFullNameField(text);
@@ -54,7 +49,7 @@ public class ElementsSteps {
     //Check Box
     @Step
     public void openCheckBoxPage(){
-        checkBoxPage.openCheckBoxPage();
+        checkBoxPage.open();
     }
     @Step
     public void selecctHomeFolder(){
@@ -69,7 +64,7 @@ public class ElementsSteps {
     //Radio Button
     @Step
     public void openRadioButtonPage(){
-        radioButtonPage.openRadioButtonPage();
+        radioButtonPage.open();
     }
     @Step
     public  void selectOption(){
@@ -83,7 +78,7 @@ public class ElementsSteps {
     //Web Tables
     @Step
     public void openWebTablesPage(){
-        webTablesPage.openWebTablesPage();
+        webTablesPage.open();
     }
     @Step
     public void addRegister(){
@@ -129,7 +124,7 @@ public class ElementsSteps {
     }
     @Step
     public void doubleClickButton(){
-        buttonsPage.doubleClick();
+       buttonsPage.doubleClick();
     }
     @Step
     public void verifyDoubleClick(){
@@ -155,7 +150,7 @@ public class ElementsSteps {
     //Links
     @Step
     public void openLinksPage(){
-        linksPage.openLinksPage();
+        linksPage.open();
     }
     @Step
     public void clickHomeLink(){
@@ -169,7 +164,7 @@ public class ElementsSteps {
     //Broken links page
     @Step
     public void openBrokenLinksPage(){
-        brokenLinksPage.openBrokenLinksPage();
+        brokenLinksPage.open();
     }
 
     @Step
@@ -184,7 +179,7 @@ public class ElementsSteps {
     //Upload&Download Page
     @Step
     public void openDwnldPage(){
-    uploadAndDownLoadPage.openDownloadPage();
+    uploadAndDownLoadPage.open();
     }
     @Step
     public void clickDownloadBttn(){
@@ -199,14 +194,14 @@ public class ElementsSteps {
         uploadAndDownLoadPage.clickUploadFile();
     }
     @Step
-    public void verifyFile(){
-        uploadAndDownLoadPage.verifyFile();
+    public void uploadSelectedFile(){
+        uploadAndDownLoadPage.uploadFile();
     }
 
     //Dynamic Properties Page
     @Step
     public void openPropertiePage(){
-        dynamicProperties.openPropertiesPage();
+        dynamicProperties.open();
     }
     @Step
     public void enableProp(){

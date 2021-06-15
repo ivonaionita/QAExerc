@@ -11,9 +11,6 @@ public class ToolTipsPage extends PageObject {
     @FindBy(css="#toolTipButton")
     private WebElementFacade hooverButton;
 
-    public void openPage(){
-        open();
-    }
 
     public void hooverOverButton() {
         Actions actions = new Actions(getDriver());

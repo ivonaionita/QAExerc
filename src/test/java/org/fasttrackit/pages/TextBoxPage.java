@@ -5,8 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.List;
 
@@ -25,10 +24,6 @@ public class TextBoxPage extends PageObject {
     private WebElementFacade submitButton;
     @FindBy(css=".border p")
     private List<WebElementFacade> form;
-
-   public void openTextBoxPage(){
-       open();
-   }
 
     public void completeFullNameField(String text){
         typeInto(fullNameField,text);

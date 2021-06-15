@@ -14,9 +14,7 @@ public class ModalDialogsPage extends PageObject {
     @FindBy(css="body > div.fade.modal.show > div > div > div.modal-body")
     private WebElementFacade smallModalMsg;
 
-    public void openModalDialogPage(){
-        open();
-    }
+
     public void clickSmallModal(){
         clickOn(smallModal);
     }

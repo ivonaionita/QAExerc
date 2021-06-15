@@ -1,6 +1,4 @@
 package org.fasttrackit.steps.serenity;
-
-import io.cucumber.java.bs.A;
 import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.*;
 import org.junit.Assert;
@@ -18,10 +16,11 @@ public class WidgetsSteps {
 
     @Step
     public void openAccordianPage(){
-        accordianPage.openAccordianPage();
+        accordianPage.open();
     }
     @Step
     public void extendSection(){
+
         accordianPage.clickSection();
     }
     @Step
@@ -33,11 +32,10 @@ public class WidgetsSteps {
 
     @Step
     public void openAutoComplete(){
-        autoCompletePage.openAutoCompletePage();
+        autoCompletePage.open();
     }
     @Step
     public void selectColor(String color) throws InterruptedException {
-        autoCompletePage.openAutoCompletePage();
         autoCompletePage.selectColor(color);
     }
     @Step
@@ -50,7 +48,7 @@ public class WidgetsSteps {
 
     @Step
     public void openDatePickerPage(){
-        datePickerPage.openPage();
+        datePickerPage.open();
     }
     @Step
     public void clickDatePicker(){
@@ -68,7 +66,7 @@ public class WidgetsSteps {
     //Slider Page
     @Step
     public void openSliderPage(){
-        sliderPage.openPage();
+        sliderPage.open();
     }
     @Step
     public void moveSlider(){
@@ -78,7 +76,7 @@ public class WidgetsSteps {
     //Progress Bar Page
     @Step
     public void openProgressBarPage(){
-        progressBarPage.openPage();
+        progressBarPage.open();
     }
     @Step
     public void startProgress(){
@@ -93,7 +91,7 @@ public class WidgetsSteps {
 
     @Step
     public void openToolTipsPage(){
-     toolTipsPage.openPage();
+     toolTipsPage.open();
     }
     @Step
     public void hooverOverElement(){
@@ -108,7 +106,7 @@ public class WidgetsSteps {
 
     @Step
     public void openSelectMenuPage(){
-        selectMenuPage.openPage();
+        selectMenuPage.open();
     }
     @Step
     public void openValuesList(){

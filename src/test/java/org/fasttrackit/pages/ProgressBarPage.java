@@ -4,10 +4,8 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
 
 @DefaultUrl("https://demoqa.com/progress-bar")
 public class ProgressBarPage extends PageObject {
@@ -17,9 +15,7 @@ public class ProgressBarPage extends PageObject {
     @FindBy(css="#progressBar > div")
     private WebElementFacade progressBar;
 
-    public void openPage(){
-        open();
-    }
+
     public void clickStart(){
         clickOn(startButton);
     }
@@ -31,12 +27,6 @@ public class ProgressBarPage extends PageObject {
         clickOn(startButton);
         System.out.println("stop");
 
-        /*  for (int i=0; i <= 100; i++) {
-            if (progressBar.getAttribute("style").contains("width: 48%")) {
-                System.out.println("process complete");
-            }
-
-        }*/
     }
 
 

@@ -6,11 +6,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @DefaultUrl("https://demoqa.com/frames")
 public class FramesPage extends PageObject {
@@ -23,10 +19,8 @@ public class FramesPage extends PageObject {
     @FindBy(css="#sampleHeading")
     private WebElementFacade textFrame2;
 
-    public void openFramesPage(){
-      open();
-     }
-     public void switchToFrame1(){
+
+    public void switchToFrame1(){
         getDriver().switchTo().frame(frame1);
     }
     public void getTextFromFrame1(){
@@ -36,7 +30,7 @@ public class FramesPage extends PageObject {
     public void noOfFrames(){
        Dimension frames;
        frames= getDriver().findElement(By.tagName("iframe")).getSize();
-        System.out.println(frames);
+       System.out.println(frames);
     }
 
 }

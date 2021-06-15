@@ -14,7 +14,7 @@ public class AlertsFramesWindowsSteps {
    //Alerts
     @Step
     public void openAlertsPage(){
-        alertsPage.openAlertPage();
+        alertsPage.open();
     }
     @Step
     public void clickAlertButton(){
@@ -52,7 +52,7 @@ public class AlertsFramesWindowsSteps {
     //Frames
     @Step
     public void openFramesPage(){
-        framesPage.openFramesPage();
+        framesPage.open();
     }
     @Step
     public void switchFrame1(){
@@ -71,7 +71,7 @@ public class AlertsFramesWindowsSteps {
 
     @Step
     public void openModalDialogPage(){
-        modalDialogsPage.openModalDialogPage();
+        modalDialogsPage.open();
     }
     @Step
     public void openSmallModal(){

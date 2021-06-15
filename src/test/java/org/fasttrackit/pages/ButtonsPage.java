@@ -1,18 +1,13 @@
 package org.fasttrackit.pages;
-
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.fasttrackit.utils.BasePage;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import javax.swing.*;
-import java.sql.Driver;
-
 @DefaultUrl("https://demoqa.com/buttons")
-public class ButtonsPage extends PageObject {
+public class ButtonsPage extends BasePage {
+
 
     @FindBy(css=".col-12.mt-4.col-md-6  div div:nth-child(1) [type=\"button\"]")
     private WebElementFacade doubleClickButton;
@@ -27,12 +22,12 @@ public class ButtonsPage extends PageObject {
     @FindBy(css="#rightClickMessage")
     private WebElementFacade rightClickSuccessMessage;
 
-    public void doubleClick(){
-        Actions action=new Actions(getDriver());
-        action.doubleClick(doubleClickButton).perform();
-    }
+    private  Object DoubleClickAction;
 
-   public void successMessageIsDisplayed(){
+    public void doubleClick(){
+        doubleClick(doubleClickButton);
+    }
+    public void successMessageIsDisplayed(){
        doubleClickSuccess.containsText("You have done a double click");
     }
 

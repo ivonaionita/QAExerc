@@ -10,11 +10,12 @@ public class SelectMenuPage extends PageObject {
     @FindBy(css="#withOptGroup")
     private WebElementFacade selectValues;
 
-    public void openPage(){
-        open();
-    }
+
     public void openValues(){
         clickOn(selectValues);
     }
+/*    public void selectValue(String option){
+        if(selectValues.getAttribute("class").contains("singleValue");
+    } */
 
 }

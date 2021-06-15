@@ -13,9 +13,7 @@ public class DynamicProperties extends PageObject {
     @FindBy(css="#visibleAfter")
     private WebElementFacade visibleAfterFiveButton;
 
-    public void openPropertiesPage(){
-        open();
-    }
+
     public void clickFiveSecButton(){
         clickOn(fiveSecButton);
     }

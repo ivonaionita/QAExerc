@@ -7,11 +7,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 
 @DefaultUrl("https://demoqa.com/date-picker")
 public class DatePickerPage extends PageObject {
@@ -19,16 +14,10 @@ public class DatePickerPage extends PageObject {
     @FindBy(css="#datePickerMonthYearInput")
     private WebElementFacade datePickerField;
 
-    public void openPage(){
-        open();
-    }
-
     public void clickDatePicker() {
     clickOn(datePickerField);
 
-}
-
-    public void selectDate() {
+}   public void selectDate() {
             WebElement datePicker = getDriver().findElement((By.cssSelector("#datePickerMonthYearInput")));
             datePicker.click();
             WebElement selectMonth = getDriver().findElement(By.cssSelector(".react-datepicker__month-select option:nth-child(12)"));

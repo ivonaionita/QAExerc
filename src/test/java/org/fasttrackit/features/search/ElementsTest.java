@@ -4,7 +4,6 @@ import net.thucydides.core.annotations.Steps;
 import org.fasttrackit.steps.serenity.ElementsSteps;
 import org.fasttrackit.utils.BaseTest;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
 public class ElementsTest extends BaseTest {
     @Steps
@@ -95,7 +94,7 @@ public class ElementsTest extends BaseTest {
     public void uploadFile(){
         elementsSteps.openDwnldPage();
         elementsSteps.chooseFile();
-     //   elementsSteps.verifyFile();
+        elementsSteps.uploadSelectedFile();
     }
 
     @Test

@@ -13,9 +13,7 @@ public class RadioButtonPage extends PageObject {
     @FindBy(css=".text-success")
     private WebElementFacade selectedMessage;
 
-    public void openRadioButtonPage(){
-        open();
-    }
+
     public void clickYes(){
         clickOn(yesButton);
     }

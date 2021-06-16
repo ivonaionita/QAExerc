@@ -39,8 +39,8 @@ public class WidgetsSteps {
         autoCompletePage.selectColor(color);
     }
     @Step
-    public void verifyColorGreenIsSelected(String displayedColor){
-       autoCompletePage.verifyColorIsSelected(displayedColor);
+    public void verifySpecificColorIsSelected(String displayedColor){
+       Assert.assertTrue(autoCompletePage.verifyColor(displayedColor));
     }
 
 
@@ -60,7 +60,7 @@ public class WidgetsSteps {
     }
     @Step
     public void checkSelectedDate(String date){
-        datePickerPage.checkDateIsCorrect(date);
+        Assert.assertTrue(datePickerPage.checkDateIsCorrect(date));
     }
 
     //Slider Page

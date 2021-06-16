@@ -11,7 +11,7 @@ public class ModalDialogsPage extends PageObject {
     private WebElementFacade smallModal;
     @FindBy(css="#closeSmallModal")
     private WebElementFacade closeSmallModal;
-    @FindBy(css="body > div.fade.modal.show > div > div > div.modal-body")
+    @FindBy(css="div.fade.modal.show div.modal-body")
     private WebElementFacade smallModalMsg;
 
 

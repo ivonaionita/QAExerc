@@ -81,7 +81,6 @@ public class AlertsFramesWindowsSteps {
     public void verifySmallModal(){
         Assert.assertTrue(modalDialogsPage.verifySmallModalMsg());
     }
-
     @Step
     public void closeSmallModal(){
         modalDialogsPage.clickCloseSmallModal();

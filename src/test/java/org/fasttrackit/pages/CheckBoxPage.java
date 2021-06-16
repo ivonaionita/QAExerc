@@ -12,7 +12,6 @@ public class CheckBoxPage extends PageObject {
     @FindBy(css="#result")
     private WebElementFacade successMessage;
 
-
     public void clickCheckBox(){
         clickOn(checkBox);
     }

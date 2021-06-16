@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://demoqa.com/radio-button")
 public class RadioButtonPage extends PageObject {
 
-    @FindBy(css="#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1) > div:nth-child(2) > label")
+    @FindBy(css="div.col-12.mt-4.col-md-6 div:nth-child(1) div:nth-child(2) ")
     private WebElementFacade yesButton;
     @FindBy(css=".text-success")
     private WebElementFacade selectedMessage;

@@ -13,7 +13,6 @@ public class WidgetsTest extends BaseTest {
     @Test
     public void verifyExtendedSection(){
         widgetsSteps.openAccordianPage();
-  //    widgetsSteps.extendSection();
         widgetsSteps.verifyExtendedSection();
     }
 
@@ -21,7 +20,7 @@ public class WidgetsTest extends BaseTest {
     public void selectColor() throws InterruptedException {
       widgetsSteps.openAutoComplete();
       widgetsSteps.selectColor("Green");
-      widgetsSteps.verifyColorGreenIsSelected("Green");
+      widgetsSteps.verifySpecificColorIsSelected("Green");
     }
 
    @Test

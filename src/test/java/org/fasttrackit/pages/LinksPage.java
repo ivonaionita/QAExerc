@@ -13,8 +13,6 @@ public class LinksPage extends PageObject {
     @FindBy(css="#simpleLink")
     private WebElementFacade homeLink;
 
-
-
     public void clickHomeLink(){
         clickOn(homeLink);
 
@@ -24,7 +22,7 @@ public class LinksPage extends PageObject {
         ArrayList<String> tabs2 = new ArrayList<String> (getDriver().getWindowHandles());
         System.out.println(tabs2);
         getDriver().switchTo().window(tabs2.get(1));
-        getDriver().findElement(By.cssSelector("#app > div > div > div.home-banner > a > img"));
+        getDriver().findElement(By.cssSelector(" div.home-banner a img"));
         getDriver().close();getDriver().switchTo().window(tabs2.get(0));
 
    }

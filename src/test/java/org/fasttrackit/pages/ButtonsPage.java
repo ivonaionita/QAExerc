@@ -27,6 +27,7 @@ public class ButtonsPage extends BasePage {
     public void doubleClick(){
         doubleClick(doubleClickButton);
     }
+
     public void successMessageIsDisplayed(){
        doubleClickSuccess.containsText("You have done a double click");
     }
@@ -43,6 +44,7 @@ public class ButtonsPage extends BasePage {
         Actions action=new Actions(getDriver());
         action.contextClick(rightClickButton).perform();
     }
+
     public void rightClickSuccessMessage(){
         rightClickSuccessMessage.containsText("You have done a right click");
     }

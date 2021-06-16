@@ -55,14 +55,14 @@ public class ElementsTest extends BaseTest {
     }
 
     @Test
-    public void clickButton(){
+    public void clickOnButton(){
         elementsSteps.openButtonsPage();
         elementsSteps.clickButton();
         elementsSteps.verifyClickSuccessMessage();
     }
 
     @Test
-    public void rightClickButton(){
+    public void rightClickOnButton(){
         elementsSteps.openButtonsPage();
         elementsSteps.clickRightButton();
         elementsSteps.verifyRightClickSuccess();
@@ -98,7 +98,7 @@ public class ElementsTest extends BaseTest {
     }
 
     @Test
-    public void dynamicButton(){
+    public void checkDynamicButton(){
         elementsSteps.openPropertiePage();
         elementsSteps.enableProp();
         elementsSteps.verifyFiveSeconds();

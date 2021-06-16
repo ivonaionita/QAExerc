@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://demoqa.com/broken")
 public class BrokenLinksPage extends PageObject {
 
-    @FindBy(css = "#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1) > a:nth-child(10)")
+    @FindBy(css = "div:nth-child(1)  a:nth-child(10)")
     private WebElementFacade validLink;
 
 

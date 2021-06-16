@@ -23,6 +23,7 @@ public class FramesPage extends PageObject {
     public void switchToFrame1(){
         getDriver().switchTo().frame(frame1);
     }
+
     public void getTextFromFrame1(){
         System.out.println(getDriver().switchTo().frame(frame1).findElement(By.id("sampleHeading")).getText());
     }

@@ -19,8 +19,11 @@ public class AutoCompletePage extends PageObject {
             autoCompleteField.sendKeys(Keys.ARROW_DOWN);
             autoCompleteField.sendKeys(Keys.ENTER);
     }
-    public void verifyColorIsSelected(String displayedColor) {
-        Assert.assertEquals(displayedColor,selectedColor.getText());
+
+    public boolean verifyColor(String color){
+            if(selectedColor.getText().equals(color)){
+                return true;
+            }return false;
     }
 }
 

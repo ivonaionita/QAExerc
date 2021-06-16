@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://demoqa.com/slider")
 public class SliderPage extends PageObject {
 
-    @FindBy(css="#sliderContainer > div.col-9 > span > input")
+    @FindBy(css=".range-slider")
     private WebElementFacade slider;
 
     public void moveSlider(){

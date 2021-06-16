@@ -49,10 +49,9 @@ public class TextBoxPage extends PageObject {
 
     public boolean verifyForm(String name, String address, String address2){
        for(WebElementFacade webElementFacade:form){
-         //  waitABit(5000);
-           if(webElementFacade.findElement(By.cssSelector(".border p:first-child")).getText().contains(name)&&
-                   webElementFacade.findElement(By.cssSelector(".border p:nth-child(3)")).getText().contains(address)&&
-                   webElementFacade.findElement(By.cssSelector(".border p:nth-child(4)")).getText().contains(address2));
+           if(webElementFacade.findElement(By.cssSelector("#name")).getText().contains(name)&&
+                   webElementFacade.findElement(By.cssSelector("#currentAddress")).getText().contains(address)&&
+                   webElementFacade.findElement(By.cssSelector("#permanentAddress")).getText().contains(address2));
                return true;
        }return false;
     }

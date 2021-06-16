@@ -19,7 +19,6 @@ public class DynamicProperties extends PageObject {
     }
 
     public boolean verifyFiveSeconds(){
-        waitABit(5000);
         if (visibleAfterFiveButton.isDisplayed()){
             return true;
         }return false;

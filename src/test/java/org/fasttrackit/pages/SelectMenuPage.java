@@ -7,15 +7,19 @@ import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl("https://demoqa.com/select-menu")
 public class SelectMenuPage extends PageObject {
-    @FindBy(css="#withOptGroup")
+    @FindBy(css=".css-1hwfws3 div")
     private WebElementFacade selectValues;
 
 
     public void openValues(){
         clickOn(selectValues);
     }
-/*    public void selectValue(String option){
-        if(selectValues.getAttribute("class").contains("singleValue");
-    } */
+
+    public boolean verifySelectedOption(String option){
+        System.out.println(selectValues.getText());
+        if(selectValues.getAttribute("class").contains("singleValue")&&selectValues.getText().equals(option)){
+            return true;
+        }return false;
+    }
 
 }

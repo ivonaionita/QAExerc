@@ -55,6 +55,7 @@ public class WidgetsTest extends BaseTest {
     public void selectValueFromMenu(){
         widgetsSteps.openSelectMenuPage();
         widgetsSteps.openValuesList();
+        widgetsSteps.checkSelectedOption("Group 1, option 1");
    }
 
 }

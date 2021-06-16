@@ -45,8 +45,8 @@ public class AlertsFramesWindowsSteps {
         alertsPage.clickSendKKeysAlert();
     }
     @Step
-    public void completeAlert(){
-        alertsPage.typeInAlert();
+    public void completeAlert(String text){
+        alertsPage.typeInAlert(text);
     }
 
     //Frames

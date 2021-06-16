@@ -20,7 +20,6 @@ public class WidgetsSteps {
     }
     @Step
     public void extendSection(){
-
         accordianPage.clickSection();
     }
     @Step
@@ -111,6 +110,10 @@ public class WidgetsSteps {
     @Step
     public void openValuesList(){
         selectMenuPage.openValues();
+    }
+    @Step
+    public void checkSelectedOption(String option){
+        Assert.assertTrue(selectMenuPage.verifySelectedOption(option));
     }
 
 }

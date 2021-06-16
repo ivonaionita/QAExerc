@@ -1,7 +1,7 @@
 package org.fasttrackit.pages;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
+import org.fasttrackit.utils.BasePage;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,7 +9,7 @@ import java.time.Duration;
 
 
 @DefaultUrl("https://demoqa.com/alerts")
-public class AlertsPage extends PageObject {
+public class AlertsPage extends BasePage {
     @FindBy(css = "#alertButton")
     private WebElementFacade clickAlert;
     @FindBy(css="#timerAlertButton")
@@ -25,8 +25,7 @@ public class AlertsPage extends PageObject {
     }
 
     public void checkAlert(){
-        waitFor(ExpectedConditions.alertIsPresent());
-        Alert alert=getDriver().switchTo().alert();
+        verifyAlert();
     }
 
     public void selectAlertAfter5Sec(){
@@ -43,15 +42,15 @@ public class AlertsPage extends PageObject {
     }
 
     public void confirmAlert(){
-        getDriver().switchTo().alert().accept();
+        acceptAlert();
     }
 
     public void clickSendKKeysAlert(){
         clickOn(sendKeysAlert);
     }
 
-    public void typeInAlert(){
-        getDriver().switchTo().alert().sendKeys("test");
+    public void typeInAlert(String text){
+        sendKeysToAlert(text);
     }
 
 

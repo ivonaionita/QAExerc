@@ -34,7 +34,7 @@ public class AlertsFrameWindowsTest extends BaseTest {
     public void sendKeysToAlert(){
         alertsFramesWindowsSteps.openAlertsPage();
         alertsFramesWindowsSteps.clickSendKeysAlert();
-        alertsFramesWindowsSteps.completeAlert();
+        alertsFramesWindowsSteps.completeAlert("test");
     }
 
     @Test

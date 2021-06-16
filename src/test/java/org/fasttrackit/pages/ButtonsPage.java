@@ -41,8 +41,7 @@ public class ButtonsPage extends BasePage {
     }
 
     public void clickRightClickButtton(){
-        Actions action=new Actions(getDriver());
-        action.contextClick(rightClickButton).perform();
+       clickRightOnButtton(rightClickButton);
     }
 
     public void rightClickSuccessMessage(){

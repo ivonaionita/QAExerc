@@ -41,7 +41,7 @@ public class UploadAndDownLoadPage extends PageObject {
     }
 
     public void uploadFile() {
-        upload("src/test/resources/Files/text.txt").to(uploadButton);
+        upload("src/test/resources/files/text.txt").to(uploadButton);
 
     }
 

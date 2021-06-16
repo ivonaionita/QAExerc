@@ -28,10 +28,7 @@ public class DatePickerPage extends PageObject {
         }
 
     public boolean checkDateIsCorrect(String date) {
-        if (datePickerField.getText().equals(date)) {
-            return true;
-        }
-        return false;
+        return datePickerField.getText().equals(date);
     }
 
 

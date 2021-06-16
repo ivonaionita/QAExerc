@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl("https://demoqa.com/tool-tips")
 public class ToolTipsPage extends PageObject {
-    @FindBy(css="#toolTipButton")
+    @FindBy(css = "#toolTipButton")
     private WebElementFacade hooverButton;
 
 
@@ -17,10 +17,8 @@ public class ToolTipsPage extends PageObject {
         actions.moveToElement(hooverButton).perform();
     }
 
-     public boolean verifyHoover(){
-        if(hooverButton.getAttribute("aria-describedby").contains("buttonToolTip")){
-            return true;
-        }return false;
+    public boolean verifyHoover() {
+        return hooverButton.getAttribute("aria-describedby").contains("buttonToolTip");
     }
 
 }

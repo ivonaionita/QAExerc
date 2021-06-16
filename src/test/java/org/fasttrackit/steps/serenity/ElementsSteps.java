@@ -1,7 +1,7 @@
 package org.fasttrackit.steps.serenity;
+
 import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.*;
-import org.fasttrackit.utils.BasePage;
 import org.junit.Assert;
 
 public class ElementsSteps {
@@ -16,199 +16,233 @@ public class ElementsSteps {
     private DynamicProperties dynamicProperties;
 
 
-   //Text Box
+    //Text Box
     @Step
-    public void openTextBoxPage(){
+    public void openTextBoxPage() {
         textBoxPage.open();
     }
+
     @Step
-    public void completeFullNameField(String text){
+    public void completeFullNameField(String text) {
         textBoxPage.completeFullNameField(text);
     }
+
     @Step
-    public void completeEmailField(String email){
+    public void completeEmailField(String email) {
         textBoxPage.typeEmail(email);
     }
+
     @Step
-    public void completeAddress(String address){
+    public void completeAddress(String address) {
         textBoxPage.typeAddress(address);
     }
+
     @Step
-    public void completeAddress2(String address){
+    public void completeAddress2(String address) {
         textBoxPage.typeAddress2(address);
     }
+
     @Step
-    public void submitFrom(){
+    public void submitFrom() {
         textBoxPage.clickSubmit();
     }
+
     @Step
-    public void verifyForm(String name, String address, String address2){
-        Assert.assertTrue(textBoxPage.verifyForm(name, address,address2));
+    public void verifyForm(String name, String address, String address2) {
+        Assert.assertTrue(textBoxPage.verifyForm(name, address, address2));
     }
 
     //Check Box
     @Step
-    public void openCheckBoxPage(){
+    public void openCheckBoxPage() {
         checkBoxPage.open();
     }
+
     @Step
-    public void selecctHomeFolder(){
+    public void selecctHomeFolder() {
         checkBoxPage.clickCheckBox();
     }
+
     @Step
-    public void verifySuccessMessage(){
+    public void verifySuccessMessage() {
         checkBoxPage.successMessageIsDisplayed();
     }
 
 
     //Radio Button
     @Step
-    public void openRadioButtonPage(){
+    public void openRadioButtonPage() {
         radioButtonPage.open();
     }
+
     @Step
-    public  void selectOption(){
+    public void selectOption() {
         radioButtonPage.clickYes();
     }
+
     @Step
-    public void verifyOption(){
+    public void verifyOption() {
         radioButtonPage.verifyMessage();
     }
 
     //Web Tables
     @Step
-    public void openWebTablesPage(){
+    public void openWebTablesPage() {
         webTablesPage.open();
     }
+
     @Step
-    public void addRegister(){
+    public void addRegister() {
         webTablesPage.clickAdd();
     }
+
     @Step
-    public void completeFirstNameFieldRF(String name){
+    public void completeFirstNameFieldRF(String name) {
         webTablesPage.typeFirstName(name);
     }
+
     @Step
-    public void completeLastNameFieldRF(String name){
+    public void completeLastNameFieldRF(String name) {
         webTablesPage.typeLastName(name);
     }
+
     @Step
-    public void completeEmailFieldRF(String email){
+    public void completeEmailFieldRF(String email) {
         webTablesPage.typeEmail(email);
     }
+
     @Step
-    public void completeAgeFieldRF(int age){
+    public void completeAgeFieldRF(int age) {
         webTablesPage.typeAge(age);
     }
+
     @Step
-    public void completeSalaryFieldRF(int salary){
+    public void completeSalaryFieldRF(int salary) {
         webTablesPage.typeSalary(salary);
     }
+
     @Step
-    public void completeDepartmentFieldRF(String department){
+    public void completeDepartmentFieldRF(String department) {
         webTablesPage.typeDepartment(department);
     }
+
     @Step
-    public void submitRegistrationForm(){
+    public void submitRegistrationForm() {
         webTablesPage.clickSubmit();
     }
+
     @Step
-    public void verifyRegistrationTable(String firstName, String lastName){
-        Assert.assertTrue(webTablesPage.isElementInTable(firstName,lastName));
+    public void verifyRegistrationTable(String firstName, String lastName) {
+        Assert.assertTrue(webTablesPage.isElementInTable(firstName, lastName));
     }
 
     //Buttons
     @Step
-    public void openButtonsPage(){
+    public void openButtonsPage() {
         buttonsPage.open();
     }
+
     @Step
-    public void doubleClickButton(){
-       buttonsPage.doubleClick();
+    public void doubleClickButton() {
+        buttonsPage.doubleClick();
     }
+
     @Step
-    public void verifyDoubleClick(){
+    public void verifyDoubleClick() {
         buttonsPage.successMessageIsDisplayed();
     }
+
     @Step
-    public void clickButton(){
+    public void clickButton() {
         buttonsPage.clickButton();
     }
+
     @Step
-    public void verifyClickSuccessMessage(){
+    public void verifyClickSuccessMessage() {
         buttonsPage.clickSuccessMessage();
     }
+
     @Step
-    public void clickRightButton(){
+    public void clickRightButton() {
         buttonsPage.clickRightClickButtton();
     }
+
     @Step
-    public void verifyRightClickSuccess(){
+    public void verifyRightClickSuccess() {
         buttonsPage.rightClickSuccessMessage();
     }
 
     //Links
     @Step
-    public void openLinksPage(){
+    public void openLinksPage() {
         linksPage.open();
     }
+
     @Step
-    public void clickHomeLink(){
+    public void clickHomeLink() {
         linksPage.clickHomeLink();
     }
+
     @Step
-    public void switchTab(){
+    public void switchTab() {
         linksPage.switchNewTab();
     }
 
     //Broken links page
     @Step
-    public void openBrokenLinksPage(){
+    public void openBrokenLinksPage() {
         brokenLinksPage.open();
     }
 
     @Step
-    public void clickOnValidLink(){
+    public void clickOnValidLink() {
         brokenLinksPage.clickValidLink();
     }
+
     @Step
-    public void verifyValidLink(){
+    public void verifyValidLink() {
         brokenLinksPage.verifyValidLink();
     }
 
     //Upload&Download Page
     @Step
-    public void openDwnldPage(){
-    uploadAndDownLoadPage.open();
+    public void openDwnldPage() {
+        uploadAndDownLoadPage.open();
     }
+
     @Step
-    public void clickDownloadBttn(){
+    public void clickDownloadBttn() {
         uploadAndDownLoadPage.clickDwnld();
     }
+
     @Step
-    public void checkFile(){
-       uploadAndDownLoadPage.checkFile("\"C:\\\\Users\\\\ivonaionita\\\\Downloads","sampleFile");
+    public void checkFile() {
+        uploadAndDownLoadPage.checkFile("\"C:\\\\Users\\\\ivonaionita\\\\Downloads", "sampleFile");
     }
+
     @Step
-    public void chooseFile(){
+    public void chooseFile() {
         uploadAndDownLoadPage.clickUploadFile();
     }
+
     @Step
-    public void uploadSelectedFile(){
+    public void uploadSelectedFile() {
         uploadAndDownLoadPage.uploadFile();
     }
 
     //Dynamic Properties Page
     @Step
-    public void openPropertiePage(){
+    public void openPropertiePage() {
         dynamicProperties.open();
     }
+
     @Step
-    public void enableProp(){
+    public void enableProp() {
         dynamicProperties.clickFiveSecButton();
     }
+
     @Step
-    public void verifyFiveSeconds(){
+    public void verifyFiveSeconds() {
         Assert.assertTrue(dynamicProperties.verifyFiveSeconds());
     }
 

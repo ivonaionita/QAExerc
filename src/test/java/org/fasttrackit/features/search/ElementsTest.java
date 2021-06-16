@@ -34,7 +34,7 @@ public class ElementsTest extends BaseTest {
         elementsSteps.verifyOption();
     }
     @Test
-    public void addElementInWebTable(){
+    public void addElementInWebTableTest(){
         elementsSteps.openWebTablesPage();
         elementsSteps.addRegister();
         elementsSteps.completeFirstNameFieldRF("ana");
@@ -93,7 +93,7 @@ public class ElementsTest extends BaseTest {
     @Test
     public void uploadFile(){
         elementsSteps.openDwnldPage();
-        elementsSteps.chooseFile();
+//        elementsSteps.chooseFile();
         elementsSteps.uploadSelectedFile();
     }
 

@@ -11,27 +11,27 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://demoqa.com/frames")
 public class FramesPage extends PageObject {
 
-    @FindBy(css="#frame1")
+    @FindBy(css = "#frame1")
     private WebElementFacade frame1;
 
-    @FindBy(css="#frame2")
+    @FindBy(css = "#frame2")
     private WebElementFacade frame2;
-    @FindBy(css="#sampleHeading")
+    @FindBy(css = "#sampleHeading")
     private WebElementFacade textFrame2;
 
 
-    public void switchToFrame1(){
+    public void switchToFrame1() {
         getDriver().switchTo().frame(frame1);
     }
 
-    public void getTextFromFrame1(){
-        System.out.println(getDriver().switchTo().frame(frame1).findElement(By.id("sampleHeading")).getText());
+    public void getTextFromFrame1() {
+       getDriver().switchTo().frame(frame1).findElement(By.id("sampleHeading")).getText();
     }
 
-    public void noOfFrames(){
-       Dimension frames;
-       frames= getDriver().findElement(By.tagName("iframe")).getSize();
-       System.out.println(frames);
+    public void noOfFrames() {
+        Dimension frames;
+        frames = getDriver().findElement(By.tagName("iframe")).getSize();
+
     }
 
 }

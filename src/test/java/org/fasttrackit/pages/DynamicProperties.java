@@ -8,19 +8,17 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://demoqa.com/dynamic-properties")
 public class DynamicProperties extends PageObject {
 
-    @FindBy(css="#enableAfter")
+    @FindBy(css = "#enableAfter")
     private WebElementFacade fiveSecButton;
-    @FindBy(css="#visibleAfter")
+    @FindBy(css = "#visibleAfter")
     private WebElementFacade visibleAfterFiveButton;
 
 
-    public void clickFiveSecButton(){
+    public void clickFiveSecButton() {
         clickOn(fiveSecButton);
     }
 
-    public boolean verifyFiveSeconds(){
-        if (visibleAfterFiveButton.isDisplayed()){
-            return true;
-        }return false;
+    public boolean verifyFiveSeconds() {
+        return (visibleAfterFiveButton.isDisplayed());
     }
 }
